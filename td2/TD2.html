@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+	<link rel="stylesheet" type="text/css" href="TD2.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="js/TD2.js"></script>
+	<title>ToDo List</title>
+	<meta charset="utf-8">
+</head>
+<body ng-controller="TodoCtrl">
+	<form ng-submit="ajouter()">
+		Ajouter la task : <input type="text" ng-model="task">
+		<input type="submit" value="Ajouter">
+	</form>
+	<div ng-repeat="element in tab">
+		<input type="checkbox" ng-model="check" ng-click="barrer($index)">
+		<span  id ="task" ng-click="surligner($index)" ng-style = "{'text-decoration' : (element.barre === true) ? 'line-through' : 'none' , 'background-color' : (element.surligne === true) ? 'lightgreen' : 'transparent'}"> {{ element.task }} </span>
+		</input>
+		<a id="croix" href="" ng-click="delete($index)"> X </a>
+    </div>
+</body>
+</html>
