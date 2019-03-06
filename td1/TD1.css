@@ -1,0 +1,8 @@
+
+#monForm {
+   position:absolute;
+   left:50%;
+   width:500px; /* A toi de donner la bonne largeur */
+   height:200px; /* A toi de donner la bonne hauteur */
+   margin-left:-150px; /* -largeur/2 */
+}

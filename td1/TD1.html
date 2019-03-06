@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="TD1.css">
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="js/TD1.js"></script>
+  <title> Formulaire </title>
+</head>
+<body onload="myFunction()">
+  <form method="post" action="/my-handling-form-page" id="monForm">
+  <h1>Formulaire</h2>
+    <p>
+        Sexe:
+        <input type="radio" id ="homme" name="choix" value="Homme" checked> Homme
+        <input type="radio" id ="femme" name="choix" value="Femme"> Femme
+    </p>
+    <p>
+        Nom :
+        <input type="text" name="nom" id='nom'>
+        <span id='missnom' class="error"></span><br>
+    </p>
+    <p>
+        Prénom :
+        <input type ="text" name="prenom" id='prenom'>
+        <span id='missprenom' class="error"></span><br>
+    </p>
+    <p>
+        Âge :
+        <input type ="text" name="age" id='age'>
+        <span id='missage' class="error"></span><br>
+    </p>
+    <p>
+        Pseudo :
+        <input type ="text" name="pseudo">
+    </p>
+    <p>
+        Mot de passe :
+        <input type="password" name="mdp" id="mdp">
+        <span id='missmdp' class="error"></span><br>
+    </p>
+    <p>
+        Mot de passe (confirmation) :
+        <input type="password" name="mdpconf" id="mdpconf">
+        <span id='missmdpconf' class="error"></span><br>
+    </p>
+    <p>
+        Pays :
+         <select name="pays">
+         <option selected>Angleterre
+         <option>France
+         <option>Suisse
+         <option>Belgique
+         <option>Allemagne
+         <option>Italie
+         <option>Espagne
+         <option>Portugal
+         </select>
+    </p>
+    <p>
+        <input type="checkbox" name="newsletter" value="1">  Je désire recevoir la newsletter chaque mois
+    </p>
+    <p>
+        <input type="submit" value="M'inscrire" onclick="return allchecked()">
+        <input type="reset" value="Réinitialiser le formulaire" id="reset">
+    </p>
+    <p id = "stop">
+    </p>
+  </form>
+  </body>
+  </html>
